@@ -1,0 +1,806 @@
+/* 🌐 Global Settings */
+:root {
+    --bg-color: #1d202e;
+    /* Global background color */
+    --text-color: white;
+    /* Optional global text color */
+    --accent-color: ;
+    /* Optional for buttons or links */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+/* 🌟 Full Header Design — Modern, Animated, and Glassmorphic */
+.glass-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08); /* glass effect */
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  animation: slideDown 1s ease-in-out;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌀 Logo with Gradient Animation */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.animated-gradient {
+  background: linear-gradient(90deg, #ff6f00, #ccff00, #00d4ff, #ff00c8);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+}
+
+/* ✨ Navigation Styling */
+.navbar a {
+  margin-left: 35px;
+  color: #ffffffdd;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, #00f0ff, #ff00f7);
+  transition: 0.4s ease-in-out;
+  border-radius: 2px;
+}
+
+.navbar a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+/* 🎬 Header Entrance Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 🎨 Gradient Text Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* === Hero Section === */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    background-color: let(--bg-color);
+    height: 900px;
+ }
+
+/* Left Side */
+#am {
+    font-size: 89px;
+    align-items: center;
+}
+
+.hero-left {
+    flex: 2;
+    color: white;
+    max-width: 50%;
+    align-items: center;
+}
+
+.hero-left h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero-left h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.hero-left p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* === Resume Button with glassmorphism, neon glow, and shine animation === */
+.resume-btn {
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #00f0ff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(0, 240, 255, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 240, 255, 0.3),
+    transparent
+  );
+  transform: rotate(25deg);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.resume-btn:hover::before {
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  opacity: 1;
+}
+
+.resume-btn:hover {
+  color: #fff;
+  background: rgba(0, 240, 255, 0.2);
+  border-color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4),
+              0 0 40px rgba(0, 240, 255, 0.2);
+}
+
+
+/* === VIDEO BUTTON STYLE === */
+.video-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.video-button:hover {
+  transform: scale(1.05);
+}
+
+.circle-outer {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+  animation: pulse-ring 2s infinite;
+  position: relative;
+}
+
+.circle-inner {
+  width: 44px;
+  height: 44px;
+  background: #000000;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.circle-inner i {
+  color: #e8efea;
+  font-size:28px;
+ }
+
+/* Hover Effects */
+.video-button:hover .circle-inner {
+  background-color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.video-button:hover .circle-inner i {
+  color: rgb(45, 186, 94);
+  transform: rotate(90deg);
+}
+
+.watch-text {
+  color: #aaa;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Pulse Animation */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0,255,255, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(0,255,255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0,255,255, 0);
+  }
+}
+
+
+/* Right Side */
+.hero-right {
+    flex: 2;
+    display: flex;
+    max-width: 50%;
+    align-items: center;
+
+}
+
+.image-container {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 90%;
+    margin-right: 450px;
+    margin-bottom: -103px;
+}
+
+/* Orbit Container Setup */
+.orbit {
+    position: absolute;
+    top:350px ;
+     right: 350px;
+    transform-style: preserve-3d;
+}
+
+/* Common Social Icon Styles */
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 720px;
+    margin-top: 90px;
+ }
+
+/* Individual Orbit Classes with Colors */
+.orbit1 .social-icon {
+    background-color: #25D366;
+    /* WhatsApp Green */
+}
+
+.orbit2 .social-icon {
+    background-color: #E1306C;
+    /* Instagram Pink */
+}
+
+.orbit3 .social-icon {
+    background-color: #1877F2;
+    /* Facebook Blue */
+}
+
+.orbit4 .social-icon {
+    background-color: #0077B5;
+    /* LinkedIn Blue */
+}
+
+/* Hover Effects */
+.social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Orbit Animations */
+.orbit1 {
+    animation: orbit1 6s linear infinite;
+}
+
+.orbit2 {
+    animation: orbit2 8s linear infinite;
+}
+
+.orbit3 {
+    animation: orbit3 10s linear infinite;
+}
+
+.orbit4 {
+    animation: orbit4 12s linear infinite;
+}
+
+@keyframes orbit1 {
+    0% {
+        transform: rotateY(0deg) translateZ(120px) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg) translateZ(120px) rotateY(-360deg);
+    }
+}
+
+@keyframes orbit2 {
+    0% {
+        transform: rotateX(0deg) translateZ(120px) rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) translateZ(120px) rotateX(-360deg);
+    }
+}
+
+@keyframes orbit3 {
+    0% {
+        transform: rotate(0deg) translateX(120px) rotate(-0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+}
+
+@keyframes orbit4 {
+    0% {
+        transform: rotate3d(1, 1, 0, 0deg) translateZ(120px) rotate3d(1, 1, 0, 0deg);
+    }
+
+    100% {
+        transform: rotate3d(1, 1, 0, 360deg) translateZ(120px) rotate3d(1, 1, 0, -360deg);
+    }
+}
+/* 🎯 About Me Section - Modern Design with Left Image and Right Text */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background: #11131e;
+  gap: 60px;
+}
+
+.about-left {
+  flex: 1;
+  text-align: center;
+}
+.about-img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1; /* Maintain square shape */
+  border-radius: 50%; /* Make image circular */
+  overflow: hidden; /* Hide corners if content spills */
+  box-shadow: 0 0 30px rgba(11, 11, 11, 0.1);
+  transition: transform 0.5s ease;
+  padding: 10px 10px 10px 10px;
+ }
+
+.about-img:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.about-right {
+  flex: 1;
+  color: white;
+}
+
+.section-title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #00ffd5, #ff00cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-description {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.about-description span {
+  color: #00ffd5;
+  font-weight: bold;
+}
+
+.about-details {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.about-btn {
+  padding: 12px 30px;
+  background: linear-gradient(to right, #00ffd5, #ff00cc);
+  border: none;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.4s ease;
+}
+.about-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffd5;
+}
+ /* Certificate Section Styles */
+.certificate-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, #f0f4ff, #e0fdfb); /* Updated soft gradient */
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  min-height: 600px;
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.content-area h2 {
+  font-size: 26px;
+  color: #003366; /* Professional navy tone */
+  margin-bottom: 1rem;
+}
+
+.content-area p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding: 50px ;
+}
+
+#view-btn {
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  background: linear-gradient(to right, #00b4db, #8e2de2); /* Gradient cyan to purple */
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#view-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.image-area {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease;
+  padding: -20px;
+}
+/* ============================
+   Services Section Styling
+   ============================ */
+
+.services {
+  padding: 60px 20px;            /* Top-bottom + side spacing */
+  background: #0e0f1a;           /* Dark background like About section */
+}
+
+.services .container {
+  max-width: 1100px;             /* Center content width */
+  margin: auto;
+  text-align: center;
+}
+
+.services .section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #00f5d4;                /* Teal/Turquoise heading color */
+  position: relative;
+}
+
+/* ------- Service Cards Grid ------- */
+.services .service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ------- Individual Service Card ------- */
+.services .service-card {
+  background: #1a1b2e;           /* Slightly lighter dark than section bg */
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services .service-card:hover {
+  transform: translateY(-8px);   /* Lift card effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ------- Icon Style ------- */
+.services .service-card .icon {
+  margin-bottom: 15px;
+}
+
+.services .service-card svg {
+  display: block;
+  margin: 0 auto;
+  stroke: #00f5d4;               /* Icon stroke color same as heading */
+  width: 50px;
+  height: 50px;
+}
+
+/* ------- Title & Text ------- */
+.services .service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #00f5d4;                /* Highlight service titles */
+}
+
+.services .service-card p {
+  font-size: 1rem;
+  color: #ccc;                   /* Light gray text for readability */
+}
+.Service-btn {
+  padding: 12px 30px;
+  background: linear-gradient(to right, #00ffd5, #ff00cc);
+  border: none;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.4s ease;
+  display: inline-block; /* proper block button */
+  text-align: center;
+  margin-top: 20px; /* 🟢 yeh line gap create karegi text aur button ke beech */
+}
+
+.Service-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffd5;
+}
+/* ================== Projects Section Start ================== */
+.projects {
+  padding: 80px 5%;
+  background-color: #0e0f1a; /* dark background */
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Section Heading */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #a259ff; /* purple accent */
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Each Project Card */
+.project-card {
+  background: #181a28;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Project Title */
+.project-title {
+  color: #00ffd5;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Iframe Container - Full Fit */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 400px;  /* fixed preview height */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+}
+
+.iframe-container iframe {
+  width: 100%;   /* fills container width */
+  height: 100%;  /* fills container height */
+  border: none;
+  display: block;
+}
+
+/* Button */
+.project-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: linear-gradient(to right, #00ffd5, #ff00cc);
+  border-radius: 30px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.project-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #00ffd5;
+}
+/* ================== Projects Section End ================== */
+
+/* portfolio page butten start *//* portfolio page button start */
+#project-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  background: #111; /* base dark bg for contrast */
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Lighting Gradient Layer */
+#project-btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -50%;
+  width: 200%; height: 100%;
+  background: linear-gradient(
+    120deg, 
+    #ff00cc, #00ffd5, #ffcc00, #ff00cc
+  );
+  background-size: 300% 300%;
+  animation: lightingRun 4s linear infinite;
+  z-index: -1;
+}
+
+/* Opposite Random Layer */
+#project-btn::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -50%;
+  width: 200%; height: 100%;
+  background: linear-gradient(
+    -120deg, 
+    #00ffd5, #ff00cc, #00ff7f, #00ffd5
+  );
+  background-size: 300% 300%;
+  animation: lightingRunReverse 6s linear infinite;
+  opacity: 0.7; /* thoda transparent for mixing */
+  z-index: -1;
+}
+
+/* Text always visible */
+#project-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animations */
+@keyframes lightingRun {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes lightingRunReverse {
+  0% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Hover Glow */
+#project-btn:hover {
+  box-shadow: 0 0 25px #ff00cc, 0 0 25px #00ffd5;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+/* end button */
+
+
+/* end button */

@@ -9,7 +9,7 @@ const certificates = [
       "Strong scores in Social Science (76) and Hindi (77).",
       "Established a solid foundation for further studies in Science stream."
     ],
-    image: "image/10marksheet.jpg"
+    image: "image/10marksheet.webp"
   },
   {
     title: "Senior Secondary School Certificate (12th - CBSE, 2024)",
@@ -21,7 +21,7 @@ const certificates = [
       "Balanced academic performance with strong scores in Physics and Chemistry.",
       "Gained scientific foundation for higher studies in Computer or Medical field."
     ],
-    image: "image/12marksheet.jpg"
+    image: "image/12marksheet.webp"
   },
   {
     title: "RS-CIT Certificate (Information Technology)",
@@ -33,7 +33,7 @@ const certificates = [
       "Covers essential IT skills including MS Office, Internet, Email, and Digital Literacy.",
       "Recognized by government for entry-level IT jobs and education."
     ],
-    image: "image/Rs-cit.jpg"
+    image: "image/Rs-cit.webp"
   },
   {
     title: "Internship Certificate (Web Development)",
@@ -45,7 +45,7 @@ const certificates = [
       "Worked on live web development projects under professional supervision.",
       "Gained practical experience in front-end & back-end development tasks."
     ],
-    image: "image/internship.jpeg"
+    image: "image/internship.webp"
   }
 ];
 

@@ -1,3 +1,40 @@
+/* hero section */// Dotted sphere animation, no white circle background
+const dotColor = "#36c9d0";
+const canvas = document.getElementById('sphere');
+const ctx = canvas.getContext('2d');
+const w = canvas.width, h = canvas.height;
+const cx = w/2, cy = h/2, r = Math.min(w,h)*0.43;
+const dots = [], numDots = 430;
+for(let i=0;i<numDots;i++){
+  const theta = Math.random()*2*Math.PI;
+  const phi = Math.acos(2*Math.random()-1);
+  dots.push({
+    theta, phi,
+    speed: (Math.random()-0.5)*0.003
+  });
+}
+function drawSphere(){
+  ctx.clearRect(0,0,w,h);
+  ctx.save();
+  // Clip to circle for clean edge
+  ctx.beginPath();
+  ctx.arc(cx, cy, r + 4, 0, 2 * Math.PI);
+  ctx.clip();
+  ctx.fillStyle = dotColor;
+  for(let d of dots){
+    d.theta += d.speed;
+    const x = Math.sin(d.phi)*Math.cos(d.theta);
+    const y = Math.sin(d.phi)*Math.sin(d.theta);
+    ctx.beginPath();
+    ctx.arc(cx + x*r, cy + y*r, 1.1, 0, 2*Math.PI);
+    ctx.fill();
+  }
+  ctx.restore();
+  requestAnimationFrame(drawSphere);
+}
+drawSphere();
+
+/*  certification section*/
 const certificates = [
   {
     title: "Secondary School Certificate (10th - CBSE, 2022)",

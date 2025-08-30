@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
-<body>
   <!-- Header -->
   <header class="glass-header">
     <a href="index.html" class="logo animated-gradient">Dhiren</a>
@@ -19,7 +18,7 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-
+<body>
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-left">
@@ -40,7 +39,9 @@
     </div>
 
     <div class="hero-right">
-      <img src="images/dhiren-profile.png" alt="Profile" class="profile-img" />
+        <div class="dotted-sphere-container">
+    <canvas id="sphere" width="290" height="290"></canvas>
+  </div>
       <!-- Social Icons Orbiting -->
       <div class="orbit orbit1">
         <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
@@ -60,7 +61,7 @@
   <!-- About Me Section -->
   <section class="about-section">
     <div class="about-left">
-      <img src="images/dhiren.jpg" alt="About Me Image" class="about-img" />
+      <img src="image/dhiren.webp" alt="About Me Image" class="about-img" />
     </div>
     <div class="about-right">
       <h2 class="section-title">About Me</h2>
@@ -73,7 +74,7 @@
         <div><strong>Skills:</strong> HTML, CSS, JavaScript, React</div>
         <div><strong>Location:</strong> India</div>
       </div>
-      <a href="#" class="about-btn">Know More</a>
+      <a href="About.html" class="about-btn">Know More</a>
     </div>
   </section>
 
@@ -165,10 +166,83 @@
         </div>
         <a href="https://thefortuneacademy.in/" target="_blank" class="project-btn">View Live</a>
       </div>
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h3 class="project-title">Essence Hotel Park Slope</h3>
+        <div class="iframe-container">
+          <iframe src="https://essencehotelparkslope.com/"></iframe>
+        </div>
+        <a href="https://essencehotelparkslope.com/" target="_blank" class="project-btn">View Live</a>
+      </div>
     </div>
     <a href="portfolio.html" id="project-btn" target="_blank"><span>View all</span></a>
   </section>
 
   <script src="dhiren.js"></script>
-</body>
+
+  <!--footer section start  -->
+<footer class="portfolio-footer">
+  <div class="footer-container">
+    <div class="footer-section links-section">
+      <h3 class="footer-heading">About Me</h3>
+      <p class="footer-description">I'm a passionate developer creating innovative digital solutions with cutting-edge technologies.</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    
+    <div class="footer-section links-section">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section contact-section">
+      <h3 class="footer-heading">Contact Info</h3>
+      <ul class="contact-info">
+        <li><i class="fas fa-envelope"></i> singd4372@gmail.com</li>
+        <li><i class="fas fa-phone"></i> +91-6367265704</li>
+        <li><i class="fas fa-map-marker-alt"></i> Ahmedabad,India</li>
+      </ul>
+    </div>
+    
+    <div class="footer-section newsletter-section">
+      <h3 class="footer-heading">Newsletter</h3>
+      <p class="footer-description">Subscribe to get updates on my latest projects and articles.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="copyright">
+      <p>&copy;2025 Dheerendra Singh Chouhan. All rights reserved.</p>
+    </div>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+  
+  <div class="footer-decoration">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+</footer>
+      <!--footer section end   -->
+
+</body> 
+       
+
 </html>

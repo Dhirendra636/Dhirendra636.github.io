@@ -1,3 +1,15 @@
+
+
+//header function
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('header.html') // header.html का सही path डालें
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-container').innerHTML = data;
+    })
+    .catch(err => console.error('Header load error:', err));
+});
+
 /* hero section */// Dotted sphere animation, no white circle background
 const dotColor = "#36c9d0";
 const canvas = document.getElementById('sphere');
@@ -144,3 +156,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200 * index); // Each card appears one after another
   });
 });
+// --------- Script for Contact Form Submission ---------// window.addEventListener("DOMContentLoaded", function () {
+    // Get the HTML elements
+    const form = document.getElementById("contact-form");
+    const popup = document.getElementById("popup");
+    const closePopupButton = document.getElementById("close-popup");
+
+    // Listen for the form to be submitted
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the page from reloading
+
+        // This command automatically collects data from ALL fields in your form,
+        // including the new phone number field.
+        const data = new FormData(form);
+        const action = e.target.action;
+
+        // Send the form data to Formspree in the background
+        fetch(action, {
+            method: "POST",
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // If successful, show the popup and clear the form
+                popup.classList.add("show");
+                form.reset();
+            } else {
+                // If there was a server error, show an alert
+                alert("Oops! There was a problem submitting your form.");
+            }
+        }).catch(error => {
+            // If there was a network error, show an alert
+            console.error("Fetch Error:", error);
+            alert("Oops! There was a network error. Please try again.");
+        });
+    });
+
+    // Listen for a click on the "Close" button to hide the popup
+    closePopupButton.addEventListener("click", function () {
+        popup.classList.remove("show");
+    });
+      

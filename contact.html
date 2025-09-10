@@ -3,117 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" href="dhiren.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-   
+    <title>Contact Dhiren</title>
+    <link rel="stylesheet" href="dhiren.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<!-- Header -->
-  <header class="glass-header">
-   <a href="index.html" class="logo animated-gradient">Dhiren</a>
-   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="About.html">About</a>
-    <a href="portfolio.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 <body>
-  <section class="contact-seam-section">
-  <div class="contact-seam-box">
-    <div class="contact-form-side">
-      <h2>GET IN TOUCH</h2>
-      <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea placeholder="Message" rows="3" required></textarea>
-        <button type="submit">SEND MESSAGE</button>
-      </form>
-      <div class="contact-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
+
+<header class="glass-header">
+    <a href="index.html" class="logo animated-gradient">Dhiren</a>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <a href="tel:+6367265704" class="call-button"> 📞 Call Me</a>
+</header>
+
+<section class="contact-seam-section">
+    <div class="contact-seam-box">
+        <div class="contact-form-side">
+            <h2>GET IN TOUCH</h2>
+            
+            <form id="contact-form" action="https://formspree.io/f/xeolnvrp" method="POST">
+                
+                <input type="text" name="Full Name" placeholder="Full Name" required>
+                <input type="email" name="Email Address" placeholder="Email Address" required>
+                
+                <input type="tel" name="Phone Number" placeholder="Phone Number (Optional)">
+                
+                <select name="Reason for Contact" required>
+                    <option value="" disabled selected>Reason for contacting...</option>
+                    <option value="Freelancing">Freelancing</option>
+                    <option value="Job Opportunity">Job Opportunity</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <textarea name="Message" placeholder="Message" rows="4" required></textarea>
+                
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+
+            <div class="contact-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="contact-info-side">
+            <ul>
+                <li><i class="fas fa-phone"></i><span>+91-6367265704</span></li>
+                <li><i class="fas fa-envelope"></i><span>singd4372@gmail.com</span></li>
+                <li><i class="fas fa-map-marker-alt"></i><span>Ahmedabad</span></li>
+            </ul>
+        </div>
     </div>
-    <div class="contact-info-side">
-      <ul>
-        <li>
-          <i class="fas fa-phone"></i>
-          <span>+1 (555 123-667)</span>
-        </li>
-        <li>
-          <i class="fas fa-envelope"></i>
-          <span>hello@yourwebsite.com</span>
-        </li>
-        <li>
-          <i class="fas fa-map-marker-alt"></i>
-          <span>123 Web Street, Anytown</span>
-        </li>
-      </ul>
-    </div>
-  </div>
 </section>
-     <!--footer section start  -->
+
+<div id="popup" class="popup-container">
+    <div class="popup-content">
+        <h1>✅ Thank You!</h1>
+        <p>Your message has been sent successfully.</p>
+        <button id="close-popup">Close</.button>
+    </div>
+</div>
+
 <footer class="portfolio-footer">
-  <div class="footer-container">
-    <div class="footer-section links-section">
-      <h3 class="footer-heading">About Me</h3>
-      <p class="footer-description">I'm a passionate developer creating innovative digital solutions with cutting-edge technologies.</p>
-      <div class="social-icons">
-        <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+    <div class="footer-container">
+        <div class="footer-section links-section">
+            <h3 class="footer-heading">About Me</h3>
+            <p class="footer-description">I'm a passionate developer creating innovative digital solutions with cutting-edge technologies.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-section links-section">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact-section">
+            <h3 class="footer-heading">Contact Info</h3>
+            <ul class="contact-info">
+                <li><i class="fas fa-envelope"></i> singd4372@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +91-6367265704</li>
+                <li><i class="fas fa-map-marker-alt"></i> Ahmedabad,India</li>
+            </ul>
+        </div>
+        <div class="footer-section newsletter-section">
+            <h3 class="footer-heading">Newsletter</h3>
+            <p class="footer-description">Subscribe to get updates on my latest projects and articles.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
     </div>
-    
-    <div class="footer-section links-section">
-      <h3 class="footer-heading">Quick Links</h3>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="portfolio.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="footer-bottom">
+        <div class="copyright">
+            <p>&copy;2025 Dheerendra Singh Chouhan. All rights reserved.</p>
+        </div>
+        <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
     </div>
-    
-    <div class="footer-section contact-section">
-      <h3 class="footer-heading">Contact Info</h3>
-      <ul class="contact-info">
-        <li><i class="fas fa-envelope"></i> singd4372@gmail.com</li>
-        <li><i class="fas fa-phone"></i> +91-6367265704</li>
-        <li><i class="fas fa-map-marker-alt"></i> Ahmedabad,India</li>
-      </ul>
+    <div class="footer-decoration">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
     </div>
-    
-    <div class="footer-section newsletter-section">
-      <h3 class="footer-heading">Newsletter</h3>
-      <p class="footer-description">Subscribe to get updates on my latest projects and articles.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </div>
-  
-  <div class="footer-bottom">
-    <div class="copyright">
-      <p>&copy;2025 Dheerendra Singh Chouhan. All rights reserved.</p>
-    </div>
-    <div class="footer-bottom-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-    </div>
-  </div>
-  
-  <div class="footer-decoration">
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-  </div>
 </footer>
-      <!--footer section end   -->
+
+<script src="script.js"></script>
 
 </body>
 </html>

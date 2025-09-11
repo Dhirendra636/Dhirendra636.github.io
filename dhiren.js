@@ -9,6 +9,20 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .catch(err => console.error('Header load error:', err));
 });
+// Wait for the page to load
+document.addEventListener('DOMContentLoaded', () => {
+
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+
+    // When the menu icon is clicked
+    menuIcon.onclick = () => {
+        // Toggle the 'fa-xmark' class to change the icon from ☰ to X
+        menuIcon.classList.toggle('fa-xmark');
+        // Toggle the 'active' class on the navbar to show/hide it
+        navbar.classList.toggle('active');
+    };
+});
 
 /* hero section */// Dotted sphere animation, no white circle background
 const dotColor = "#36c9d0";

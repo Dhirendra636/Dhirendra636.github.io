@@ -1,267 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhiren Portfolio</title>
-  <link rel="stylesheet" href="dhiren.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
-<link rel="preload" href="hero.webp" as="image">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Website</title>
+    
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://kit.fontawesome.com/1b7d1c0f0f.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
 </head>
-
-  <header class="glass-header">
-    <a href="index.html" class="logo animated-gradient">Dhiren</a>
-    
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <a href="portfolio.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <i class="fa-solid fa-bars" id="menu-icon"></i>
-
-    <a href="tel:+916367265704" class="call-button"> 📞 Call Me</a>
-</header>
 <body>
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-left">
-      <h1>Hello, I'm</h1>
-      <h2>Dhirendra Singh Chouhan</h2>
-      <p>Frontend Developer & web developer</p>
 
-      <a href="#" class="resume-btn">Download Resume</a>
+    <header id="header-placeholder"></header>
 
-      <div class="video-button">
-        <div class="circle-outer">
-          <div class="circle-inner">
-            <i class="fas fa-play"></i>
-          </div>
-        </div>
-        <span class="watch-text">Watch Intro Video</span>
-      </div>
-    </div>
+    <main> 
+         <section class="hero-section">
+  <div class="text-area animate-fadeInUp">
+    <h1 class="animate-word-reveal">
+      <span class="word-wrapper"><span class="animated-word">Hi,</span></span>
+      <span class="word-wrapper"><span class="animated-word">I'm</span></span><br>
+      <span class=><span>Dheerendra</span></span> 
+     </h1>
+    <p style="animation-delay:0.6s">
+      A creative <span class="font-semibold">Web Developer</span> passionate about crafting interactive, modern, and elegant digital experiences.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-5 justify-center md:justify-start mt-10" style="animation-delay:0.8s">
+      <a href="#" class="btn btn-resume">📄 Resume</a>
+     </div>
+  </div>
 
-    <div class="hero-right">
-        <div class="dotted-sphere-container">
-    <canvas id="sphere" width="290" height="290"></canvas>
-   </div>
-      <!-- Social Icons Orbiting -->
-      <div class="orbit orbit1">
-        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+  <div class="hero-slider">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" class="slide" alt="Workspace 1">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" class="slide" alt="Workspace 2">
+    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&q=80" class="slide" alt="Workspace 3">
+    <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=600&q=80" class="slide" alt="Workspace 4">
+    <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=600&q=80" class="slide" alt="Workspace 5">
+  </div>
+</section>
+<!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      
+      <!-- Left Image -->
+      <div class="about-image">
+        <img src="img/dhiren.png" alt="About Me">
       </div>
-      <div class="orbit orbit2">
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+
+      <!-- Right Content -->
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm <span>Dheerendra Singh</span> — a creative and result-oriented <b>Web Developer</b> specializing in crafting visually appealing, performance-driven, and user-friendly websites.  
+          I provide complete web solutions including <b>Web Design, SEO Optimization, E-Commerce, Shopify Development,</b> and <b>Website Maintenance</b> — helping brands shine online.
+        </p>
+        <a href="#contact" class="hire-btn">Hire Me</a>
       </div>
-      <div class="orbit orbit3">
-        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-      </div>
-      <div class="orbit orbit4">
-        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+
     </div>
   </section>
-  <!-- hero section end -->
+  <!-- Services Section on Home Page -->
+<section id="services" class="home-services py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="section-title text-4xl font-bold text-center mb-2">My Services</h2>
+    <p class="section-subtitle text-center text-blue-600 mb-12 font-medium">
+      I provide end-to-end web solutions to help your business grow online
+    </p>
 
-  <!-- About Me Section  start -->
-  <section class="about-section">
-    <div class="about-left">
-      <img src="image/dhiren.webp" alt="About Me Image" class="about-img" />
-    </div>
-    <div class="about-right">
-      <h2 class="section-title">About Me</h2>
-      <p class="about-description">
-        I'm <strong>Dhirendra Singh Chouhan</strong>, a passionate <span>Frontend Developer</span> and <span>Web developer</span>
-        dedicated to building beautiful and responsive websites. I specialize in creating engaging digital experiences with clean code, modern aesthetics, and user-focused design.
-      </p>
-      <div class="about-details">
-        <div><strong>Experience:</strong> 2+ Years</div>
-        <div><strong>Skills:</strong> HTML, CSS, JavaScript, React</div>
-        <div><strong>Location:</strong> India</div>
-      </div>
-      <a href="About.html" class="about-btn">Know More</a>
-    </div>
-  </section>
- <!-- Services Section -->
-  <section class="services" id="services">
-    <div class="container">
-      <h2 class="section-title">My Services</h2>
-      <div class="service-cards">
-        <!-- Web Design Card -->
-        <div class="service-card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="none" stroke="#0077b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-          </div>
-          <h3>Web Design</h3>
-          <p>Creative and modern web design solutions for businesses and individuals.</p>
-          <a href="#" class="Service-btn">Know More</a>
-        </div>
-        <!-- Web Development Card -->
-        <div class="service-card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" stroke="#0077b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code">
-              <polyline points="16 18 22 12 16 6"></polyline>
-              <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-          </div>
-          <h3>Web Development</h3>
-          <p>Clean, optimized, and responsive websites built with the latest technologies.</p>
-          <a href="#" class="Service-btn">Know More</a>
-        </div>
-        <!-- E-commerce Card -->
-        <div class="service-card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" stroke="#0077b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.98-1.61L23 6H6"></path>
-            </svg>
-          </div>
-          <h3>E-commerce</h3>
-          <p>Custom online stores with secure payment integration and user-friendly features.</p>
-          <a href="#" class="Service-btn">Know More</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-  <!-- Projects Section -->
-  <section class="projects">
-    <h2 class="section-title">My Latest Projects – Showcasing Creativity & Skills</h2>
-    <p class="section-subtitle">Here are some of my most recent projects that highlight my expertise in Web Development and Web Design. Every project reflects my commitment to creativity, responsive functionality, and client satisfaction.</p>
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <h3 class="project-title">Braugalie</h3>
-        <div class="iframe-container">
-          <iframe src="https://braugalie.com/"></iframe>
-        </div>
-        <a href="https://braugalie.com/" target="_blank" class="project-btn">View Live</a>
+      <div class="service-card p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-center">
+        <div class="service-icon text-5xl mb-4 text-blue-600">💻</div>
+        <h3 class="service-title text-2xl font-semibold mb-2">Web Development</h3>
+        <p class="service-desc text-gray-600 mb-4">Responsive, dynamic, and modern websites using HTML, CSS, JavaScript, React, and other frameworks.</p>
+        <a href="#contact" class="service-btn inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold hover:scale-105 transition-all">Hire Me</a>
       </div>
-      <!-- Project 2 -->
-      <div class="project-card">
-        <h3 class="project-title">Essence Hotel Park Slope</h3>
-        <div class="iframe-container">
-          <iframe src="https://essencehotelparkslope.com/"></iframe>
-        </div>
-        <a href="https://essencehotelparkslope.com/" target="_blank" class="project-btn">View Live</a>
-      </div>
-      <!-- Project 3 -->
-      <div class="project-card">
-        <h3 class="project-title">The Fortune Academy</h3>
-        <div class="iframe-container">
-          <iframe src="https://thefortuneacademy.in/"></iframe>
-        </div>
-        <a href="https://thefortuneacademy.in/" target="_blank" class="project-btn">View Live</a>
-      </div>
-      <!-- Project 4 -->
-      <div class="project-card">
-        <h3 class="project-title"> lostsoulcamps </h3>
-        <div class="iframe-container">
-          <iframe src="https://lostsoulcamps.com/"></iframe>
-        </div>
-        <a href="https://lostsoulcamps.com/" target="_blank" class="project-btn">View Live</a>
-      </div>
-      <!-- Project 5 -->
-      <div class="project-card">
-        <h3 class="project-title">Ram travel point </h3>
-        <div class="iframe-container">
-          <iframe src="https://carrentservice.in/"></iframe>
-        </div>
-        <a href="https://carrentservice.in/" target="_blank" class="project-btn">View Live</a>
-      </div>
-      <!-- Project 6 -->
-      <div class="project-card">
-        <h3 class="project-title">Ram state Management</h3>
-        <div class="iframe-container">
-          <iframe src="https://ramgroupindia.com/"></iframe>
-        </div>
-        <a href="https://ramgroupindia.com/" target="_blank" class="project-btn">View Live</a>
-      </div>
-       
-    </div>
-    <a href="portfolio.html" id="project-btn" target="_blank"><span>View all</span></a>
-  </section>
 
- <section>
-  <div>
-    <a href="contact.html" class="hire-me-btn"></a>
-  </div>
- </section>
-   <script src="dhiren.js"></script>
-
-  <!--footer section start  -->
-<footer class="portfolio-footer">
-  <div class="footer-container">
-    <div class="footer-section links-section">
-      <h3 class="footer-heading">About Me</h3>
-      <p class="footer-description">I'm a passionate developer creating innovative digital solutions with cutting-edge technologies.</p>
-      <div class="social-icons">
-        <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+      <div class="service-card p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-center">
+        <div class="service-icon text-5xl mb-4 text-blue-600">🛒</div>
+        <h3 class="service-title text-2xl font-semibold mb-2">E-Commerce Solutions</h3>
+        <p class="service-desc text-gray-600 mb-4">Build online stores with Shopify, WooCommerce, or custom platforms for smooth shopping experiences.</p>
+        <a href="#contact" class="service-btn inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold hover:scale-105 transition-all">Hire Me</a>
       </div>
-    </div>
-    
-    <div class="footer-section links-section">
-      <h3 class="footer-heading">Quick Links</h3>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="portfolio.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    
-    <div class="footer-section contact-section">
-      <h3 class="footer-heading">Contact Info</h3>
-      <ul class="contact-info">
-        <li><i class="fas fa-envelope"></i> singd4372@gmail.com</li>
-        <li><i class="fas fa-phone"></i> +91-6367265704</li>
-        <li><i class="fas fa-map-marker-alt"></i> Ahmedabad,India</li>
-      </ul>
-    </div>
-    
-    <div class="footer-section newsletter-section">
-      <h3 class="footer-heading">Newsletter</h3>
-      <p class="footer-description">Subscribe to get updates on my latest projects and articles.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
+
+      <div class="service-card p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-center">
+        <div class="service-icon text-5xl mb-4 text-blue-600">🔍</div>
+        <h3 class="service-title text-2xl font-semibold mb-2">SEO & Marketing</h3>
+        <p class="service-desc text-gray-600 mb-4">Improve your website visibility and drive traffic using proven SEO strategies and digital marketing.</p>
+        <a href="#contact" class="service-btn inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold hover:scale-105 transition-all">Hire Me</a>
+      </div>
+
+      <div class="service-card p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-center">
+        <div class="service-icon text-5xl mb-4 text-blue-600">🛠️</div>
+        <h3 class="service-title text-2xl font-semibold mb-2">Shopify Development</h3>
+        <p class="service-desc text-gray-600 mb-4">Custom Shopify stores with themes, apps, and optimizations for higher conversions.</p>
+        <a href="#contact" class="service-btn inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold hover:scale-105 transition-all">Hire Me</a>
+      </div>
+
+      <div class="service-card p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-center">
+        <div class="service-icon text-5xl mb-4 text-blue-600">🛡️</div>
+        <h3 class="service-title text-2xl font-semibold mb-2">Website Maintenance</h3>
+        <p class="service-desc text-gray-600 mb-4">Keep your website secure, updated, and optimized for the best performance at all times.</p>
+        <a href="#contact" class="service-btn inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold hover:scale-105 transition-all">Hire Me</a>
+      </div>
+
+      <div class="service-card p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-center">
+        <div class="service-icon text-5xl mb-4 text-blue-600">📱</div>
+        <h3 class="service-title text-2xl font-semibold mb-2">Responsive Design</h3>
+        <p class="service-desc text-gray-600 mb-4">Websites that look perfect on any device: desktop, tablet, or mobile.</p>
+        <a href="#contact" class="service-btn inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold hover:scale-105 transition-all">Hire Me</a>
+      </div>
+
     </div>
   </div>
-  
-  <div class="footer-bottom">
-    <div class="copyright">
-      <p>&copy;2025 Dheerendra Singh Chouhan. All rights reserved.</p>
+</section>
+<!-- CTA 1 – For Projects / Services -->
+<section class="cta-service">
+  <h2>Ready to Bring Your Ideas to Life?</h2>
+  <p>Let’s work together to build stunning, high-performing web experiences that elevate your brand.</p>
+  <a href="contact.html">Get in Touch</a>
+</section>
+
+
+
+<section class="projects-section">
+  <h2 class="section-title">My Projects</h2>
+  <p class="section-subtitle">Check out my live web projects directly below</p>
+
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3 class="project-title">Project One</h3>
+      <p class="project-desc">A responsive web app built with HTML, CSS, and JavaScript.</p>
+      <iframe src="https://example-live-project1.com" frameborder="0" loading="lazy"></iframe>
+      <a href="https://example-live-project1.com" target="_blank" class="project-btn">View Full</a>
     </div>
-    <div class="footer-bottom-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3 class="project-title">Project Two</h3>
+      <p class="project-desc">An e-commerce website with dynamic shopping cart functionality.</p>
+      <iframe src="https://example-live-project2.com" frameborder="0" loading="lazy"></iframe>
+      <a href="https://example-live-project2.com" target="_blank" class="project-btn">View Full</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <h3 class="project-title">Project Three</h3>
+      <p class="project-desc">A personal portfolio site with modern UI design.</p>
+      <iframe src="https://example-live-project3.com" frameborder="0" loading="lazy"></iframe>
+      <a href="https://example-live-project3.com" target="_blank" class="project-btn">View Full</a>
     </div>
   </div>
-  
-  <div class="footer-decoration">
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-  </div>
-</footer>
-      <!--footer section end   -->
+</section>
+
+<!-- CTA 2 – For Hire Me -->
+<section class="cta-hire">
+  <h2>Want to Hire a Passionate Web Developer?</h2>
+  <p>I’m open for full-time, freelance, or remote opportunities. Let’s create something impactful together.</p>
+  <a href="#" id="hireMeBtn">Hire Me</a>
+</section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="index.js"></script>
 
 </body> 
-       
-
 </html>

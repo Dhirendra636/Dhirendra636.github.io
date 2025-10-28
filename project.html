@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dheerendra Singh | Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/1b7d1c0f0f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+      background: #f8fafc;
+      color: #1f2937;
+    }
+    h1,h2,h3 { font-family: "Playfair Display", serif; }
+
+    /* Hero Section with BG Image + Color Overlay */
+    .projects-hero {
+      position: relative;
+      text-align: center;
+      padding: 160px 20px 120px;
+      color: #fff;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    }
+    .projects-hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 50, 0.5); /* semi-transparent overlay */
+      z-index: 0;
+    }
+    .projects-hero h1,
+    .projects-hero p {
+      position: relative;
+      z-index: 1;
+    }
+    .projects-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .projects-hero h1 span {
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .projects-hero p {
+      font-size: 1.25rem;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.7;
+      color: #f1f5f9;
+    }
+
+    /* Filter Buttons */
+    .filter-buttons {
+      text-align: center;
+      margin: 40px 20px 20px;
+    }
+    .filter-btn {
+      display: inline-block;
+      margin: 0 10px 10px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      background: #e0e7ff;
+      color: #1e3a8a;
+      transition: all 0.3s ease;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      max-width: 1200px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      border: 1px solid #e0e7ff;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(37,99,235,0.2);
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: #1e293b;
+    }
+    .project-desc {
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .project-btn {
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .project-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+    }
+
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .footer-social a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    .footer-social a:hover {
+      color: #3b82f6;
+    }
+
+    @media(max-width:768px) {
+      .projects-hero h1 { font-size: 2.5rem; }
+      .project-title { font-size: 1.25rem; }
+    }
+    @media(max-width:480px){
+      .projects-hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header -->
+  <header id="header-placeholder"></header>
+
+  <!-- Projects Hero Section -->
+  <section class="projects-hero">
+    <h1>My <span>Projects</span></h1>
+    <p>Check out a selection of my professional projects including Corporate, E-Commerce, Shopify, SEO, and Maintenance.</p>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <span class="filter-btn active" data-category="all">All</span>
+    <span class="filter-btn" data-category="corporate">Corporate</span>
+    <span class="filter-btn" data-category="ecommerce">E-Commerce</span>
+    <span class="filter-btn" data-category="shopify">Shopify</span>
+    <span class="filter-btn" data-category="seo">SEO</span>
+    <span class="filter-btn" data-category="maintenance">Maintenance</span>
+  </div>
+
+  <!-- Projects Grid -->
+  <section class="projects-grid">
+    <!-- Corporate -->
+    <div class="project-card" data-category="corporate">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="The Crystal Engage">
+      <h3 class="project-title">The Crystal Engage</h3>
+      <p class="project-desc">Professional corporate website showcasing services and portfolio.</p>
+      <a href="https://thecrystalengage.com" target="_blank" class="project-btn">View Project</a>
+    </div>
+    <div class="project-card" data-category="corporate">
+      <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&q=80" alt="Ram Group India">
+      <h3 class="project-title">Ram Group India</h3>
+      <p class="project-desc">Corporate website presenting company profile, services, and business info.</p>
+      <a href="https://ramgroupindia.com" target="_blank" class="project-btn">View Project</a>
+    </div>
+    <div class="project-card" data-category="corporate">
+      <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=600&q=80" alt="Ratnakar Fasteners">
+      <h3 class="project-title">Ratnakar Fasteners</h3>
+      <p class="project-desc">Website showcasing fasteners products, catalog, and contact info.</p>
+      <a href="https://ratnakarfasteners.com" target="_blank" class="project-btn">View Project</a>
+    </div>
+
+    <!-- E-Commerce -->
+    <div class="project-card" data-category="ecommerce">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="PharmaChem Cosmetics">
+      <h3 class="project-title">PharmaChem Cosmetics</h3>
+      <p class="project-desc">E-commerce platform for PharmaChem Cosmetics with online ordering.</p>
+      <a href="https://www.pharmachemcosmetics.com" target="_blank" class="project-btn">View Project</a>
+    </div>
+
+    <!-- Shopify -->
+    <div class="project-card" data-category="shopify">
+      <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&q=80" alt="Braugalie">
+      <h3 class="project-title">Braugalie</h3>
+      <p class="project-desc">Custom Shopify store designed for smooth user experience and optimized sales.</p>
+      <a href="https://braugalie.com" target="_blank" class="project-btn">View Project</a>
+    </div>
+
+    <!-- SEO -->
+    <div class="project-card" data-category="seo">
+      <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=600&q=80" alt="Essence Hotel Park Slope">
+      <h3 class="project-title">Essence Hotel Park Slope</h3>
+      <p class="project-desc">Hotel website optimized for SEO to increase visibility and bookings.</p>
+      <a href="https://essencehotelparkslope.com" target="_blank" class="project-btn">View Project</a>
+    </div>
+
+    <!-- Maintenance -->
+    <div class="project-card" data-category="maintenance">
+      <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=600&q=80" alt="The Fortune Academy">
+      <h3 class="project-title">The Fortune Academy</h3>
+      <p class="project-desc">Educational website with ongoing updates, maintenance, and support.</p>
+      <a href="https://thefortuneacademy.in" target="_blank" class="project-btn">View Project</a>
+    </div>
+
+    <div class="project-card" data-category="maintenance">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="Lost Soul Camps">
+      <h3 class="project-title">Lost Soul Camps</h3>
+      <p class="project-desc">Website promoting adventure and camping experiences with maintenance support.</p>
+      <a href="https://lostsoulcamps.com" target="_blank" class="project-btn">View Project</a>
+    </div>
+  </section>
+
+   <!-- Dynamic Footer -->
+  <footer id="footer-placeholder"></footer>
+
+  <!-- Dynamic Header & Footer Script -->
+  <script src="index.js"></script>
+
+  <!-- Filter Script -->
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const category = btn.getAttribute('data-category');
+
+        projects.forEach(project => {
+          if(category === 'all' || project.getAttribute('data-category') === category){
+            project.style.display = 'block';
+          } else {
+            project.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

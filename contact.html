@@ -1,129 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Dhiren</title>
-    <link rel="stylesheet" href="dhiren.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Dheerendra Singh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* HERO SECTION */
+    .contact-hero {
+      position: relative;
+      height: 60vh;
+      background: url('https://images.unsplash.com/photo-1522204501921-1943f3fb9c07?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .contact-hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(2px);
+      z-index: 1;
+    }
+
+    .contact-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+      padding: 20px;
+    }
+
+    .contact-hero-content h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 0.8rem;
+      color: #f1f5f9;
+    }
+
+    .contact-hero-content p {
+      font-size: 1.15rem;
+      color: #e2e8f0;
+      line-height: 1.7;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      max-width: 1100px;
+      margin: -80px auto 100px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 900px) {
+      .contact-section {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+      }
+    }
+
+    /* LEFT INFO */
+    .contact-info h3 {
+      font-size: 1.7rem;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    .contact-info ul li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: #475569;
+    }
+
+    .contact-info a {
+      color: #2563eb;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #1e40af;
+    }
+
+    /* SOCIAL ICONS */
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #2563eb;
+      color: #fff;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #1e40af;
+      transform: translateY(-4px);
+    }
+
+    /* FORM SECTION */
+    .contact-form h3 {
+      font-size: 1.7rem;
+      color: #0f172a;
+      margin-bottom: 25px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      background: #f9fafb;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 8px rgba(37, 99, 235, 0.2);
+      outline: none;
+    }
+
+    .contact-form button {
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+    }
+
+    /* MAP */
+    .map-container {
+      width: 100%;
+      height: 260px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      margin-top: 25px;
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Dynamic Header -->
+  <header id="header-placeholder"></header>
 
-<header class="glass-header">
-    <a href="index.html" class="logo animated-gradient">Dhiren</a>
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <a href="portfolio.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <a href="tel:+916367265704" class="call-button"> 📞 Call Me</a>
-</header>
-
-<section class="contact-seam-section">
-    <div class="contact-seam-box">
-        <div class="contact-form-side">
-            <h2>GET IN TOUCH</h2>
-            
-            <form id="contact-form" action="https://formspree.io/f/xeolnvrp" method="POST">
-                
-                <input type="text" name="Full Name" placeholder="Full Name" required>
-                <input type="email" name="Email Address" placeholder="Email Address" required>
-                
-                <input type="tel" name="Phone Number" placeholder="Phone Number (Optional)">
-                
-                <select name="Reason for Contact" required>
-                    <option value="" disabled selected>Reason for contacting...</option>
-                    <option value="Freelancing">Freelancing</option>
-                    <option value="Job Opportunity">Job Opportunity</option>
-                    <option value="Other">Other</option>
-                </select>
-
-                <textarea name="Message" placeholder="Message" rows="4" required></textarea>
-                
-                <button type="submit">SEND MESSAGE</button>
-            </form>
-
-            <div class="contact-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="contact-info-side">
-            <ul>
-                <li><i class="fas fa-phone"></i><span>+91-6367265704</span></li>
-                <li><i class="fas fa-envelope"></i><span>singd4372@gmail.com</span></li>
-                <li><i class="fas fa-map-marker-alt"></i><span>Ahmedabad</span></li>
-            </ul>
-        </div>
+  <!-- HERO SECTION -->
+  <section class="contact-hero">
+    <div class="contact-hero-content">
+      <h1>Let’s Connect</h1>
+      <p>Reach out for collaborations, hiring, or any exciting project opportunities — I’d love to hear from you!</p>
     </div>
-</section>
+  </section>
 
-<div id="popup" class="popup-container">
-    <div class="popup-content">
-        <h1>✅ Thank You!</h1>
-        <p>Your message has been sent successfully.</p>
-        <button id="close-popup">Close</.button>
-    </div>
-</div>
+  <!-- CONTACT MAIN CONTENT -->
+  <section class="contact-section">
+    <!-- LEFT: INFO -->
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+      <ul>
+        <li><i class="fa fa-envelope"></i> <a href="mailto:dheerendra@example.com">dheerendra@example.com</a></li>
+        <li><i class="fa fa-phone"></i> <a href="tel:+911234567890">+91 12345 67890</a></li>
+        <li><i class="fa fa-location-dot"></i> Ahmedabad, Gujarat, India</li>
+      </ul>
 
-<footer class="portfolio-footer">
-    <div class="footer-container">
-        <div class="footer-section links-section">
-            <h3 class="footer-heading">About Me</h3>
-            <p class="footer-description">I'm a passionate developer creating innovative digital solutions with cutting-edge technologies.</p>
-            <div class="social-icons">
-                <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-        <div class="footer-section links-section">
-            <h3 class="footer-heading">Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="portfolio.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section contact-section">
-            <h3 class="footer-heading">Contact Info</h3>
-            <ul class="contact-info">
-                <li><i class="fas fa-envelope"></i> singd4372@gmail.com</li>
-                <li><i class="fas fa-phone"></i> +91-6367265704</li>
-                <li><i class="fas fa-map-marker-alt"></i> Ahmedabad,India</li>
-            </ul>
-        </div>
-        <div class="footer-section newsletter-section">
-            <h3 class="footer-heading">Newsletter</h3>
-            <p class="footer-description">Subscribe to get updates on my latest projects and articles.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="copyright">
-            <p>&copy;2025 Dheerendra Singh Chouhan. All rights reserved.</p>
-        </div>
-        <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </div>
-    </div>
-    <div class="footer-decoration">
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
-</footer>
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
 
-<script src="script.js"></script>
+      <h3>Office Hours</h3>
+      <p>Mon – Fri: 10:00 AM – 7:00 PM</p>
 
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.719932729436!2d72.57419661450564!3d23.07705178489513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84c6bdb99e21%3A0x849a3f1d7d4e8f2!2sAhmedabad%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sin!4v1697688449821!5m2!1sen!2sin"
+          width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <select name="subject" required>
+          <option value="">-- Select Subject --</option>
+          <option value="hire">Hire Me</option>
+          <option value="project">Project Inquiry</option>
+        </select>
+
+        <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer -->
+  <footer id="footer-placeholder"></footer>
+  <script src="index.js"></script>
 </body>
 </html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Dheerendra Singh</title>
+ 
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://kit.fontawesome.com/1b7d1c0f0f.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1f2937;
+      background-color: #f9fafb;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+    }
+
+    /* HERO SECTION */
+    .about-hero {
+      position: relative;
+      height: 55vh;
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      margin-bottom: 100px;
+    }
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(14, 30, 64, 0.6); /* 50% transparent blue overlay */
+      backdrop-filter: blur(0.3);
+      z-index: 1;
+    }
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .about-hero-content h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+    .about-hero-content p {
+      font-size: 1.2rem;
+      color: #e0e7ff;
+    }
+
+    /* PROFILE SECTION */
+    .about-profile-section {
+      max-width: 1300px;
+      margin: -80px auto 60px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .about-profile-section img {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+    .about-profile-section h2 {
+      color: #2563eb;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .about-profile-section p {
+      color: #4b5563;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    /* SKILLS */
+    .about-skills {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+    }
+    .about-skills h2 {
+      color: #2563eb;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .skill-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      width: 200px;
+      padding: 30px 20px;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .skill-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+    }
+    .skill-card img {
+      width: 50px;
+      margin-bottom: 1rem;
+    }
+    .skill-card h3 {
+      color: #1e3a8a;
+      font-size: 1.1rem;
+    }
+
+    /* JOURNEY */
+    .about-journey {
+      padding: 80px 20px;
+      background: #f9fafb;
+ 
+    }
+    .about-journey h2 {
+      text-align: center;
+      color: #2563eb;
+      margin-bottom: 3rem;
+      font-size: 2.2rem;
+     }
+    .timeline {
+      max-width:1000px;
+      margin: auto;
+      border-left: 3px solid #2563eb;
+      padding-left: 30px;
+    }
+    .timeline-step {
+      position: relative;
+      margin-bottom: 60px;
+      
+    }
+    .timeline-step::before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: 8px;
+      width: 20px;
+      height: 20px;
+      background: #2563eb;
+      border-radius: 50%;
+    }
+    .timeline-step h3 {
+      color: #0a2342;
+      margin-bottom: 6px;
+      font-size: 1.3rem;
+    }
+    .timeline-step p {
+      color: #4b5563;
+      font-size: 1rem;
+    }
+
+    /* CTA */
+    .about-cta {
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .about-cta h2 {
+      font-size: 2rem;
+    }
+    .about-cta p {
+      color: #e0e7ff;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .about-cta a {
+      background: white;
+      color: #2563eb;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+    }
+    .about-cta a:hover {
+      transform: scale(1.07);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .about-profile-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-profile-section img {
+        margin-bottom: 20px;
+      }
+      .about-hero-content h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <header id="header-placeholder"></header>
+
+  <!-- HERO SECTION -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>  <span style="color:#3b82f6;">About'us</span></h1>
+      <p>TheDsc is a creative service-based company dedicated to transforming ideas into powerful digital experiences. We blend design, strategy, and innovation to help brands grow and stand out online.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="about-container">
+      
+      <!-- Left Image -->
+      <div class="about-image">
+        <img src="img/dhiren.png" alt="About Me">
+      </div>
+
+      <!-- Right Content -->
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+  Hello! I'm <span>Dheerendra Singh Chouhan</span> — a passionate and result-driven <b>Web Developer</b> dedicated to building modern, responsive, and high-performing websites.  
+  I deliver end-to-end web solutions including <b>Web Design, SEO Optimization, E-Commerce Development, Shopify Customization,</b> and <b>Website Maintenance</b> — empowering businesses to grow and stand out in the digital world.
+</p>
+
+       </div>
+
+    </div>
+  </section>
+  <!-- SKILLS -->
+<section class="about-skills">
+  <h2>My Core Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML5" />
+      <h3>HTML5</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="CSS3" />
+      <h3>CSS3</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="JavaScript" />
+      <h3>JavaScript</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+      <h3>MongoDB</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+      <h3>SQL</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="RDBMS" />
+      <h3>RDBMS</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
+      <h3>C</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+      <h3>C++</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+      <h3>TypeScript</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+      <h3>Python</h3>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+      <h3>PHP</h3>
+    </div>
+  </div>
+</section>
+
+
+  <!-- JOURNEY -->
+  <section class="about-journey">
+    <h2>My Journey</h2>
+    <div class="timeline">
+       <div class="timeline-step">
+        <h3>2023 — The Beginning</h3>
+        <p>Started learning HTML & CSS, building simple static websites to master the core structure of the web.</p>
+      </div>
+      <div class="timeline-step">
+        <h3>2024 — Advancing with JavaScript</h3>
+        <p>Gained strong control over JavaScript, enhancing websites with interactivity and dynamic functionality.</p>
+      </div>
+      <div class="timeline-step">
+        <h3>2024 — Front-End Frameworks</h3>
+        <p>Explored React and modern libraries to create fast, responsive, and scalable web applications.</p>
+      </div>
+      <div class="timeline-step">
+        <h3>2025 — Real Projects & Freelancing</h3>
+        <p>Developed real-world projects and collaborated with clients, delivering high-performance full-stack solutions.</p>
+      </div>
+      <div class="timeline-step">
+        <h3>2025 — Innovation & Mastery</h3>
+        <p>Continuing to grow with new technologies like Next.js, Node.js, and APIs — creating complete, future-ready digital products.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <h2>Let’s Build Something Great Together 🚀</h2>
+    <p>Have a project idea? I love collaborating and creating digital solutions that shine.</p>
+    <a href="contact.html">Contact Me</a>
+  </section>
+
+  <footer id="footer-placeholder"></footer>
+  <script src="index.js"></script>
+</body>
+</html>
